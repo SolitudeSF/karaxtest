@@ -1,4 +1,22 @@
+@font-face{font-family:LoL Body;font-style:normal;font-weight:400;src:url(https://raw.communitydragon.org/latest/plugins/rcp-fe-lol-typekit/global/default/fonts/spiegel/spiegel-regular.otf) format("opentype")}
+@font-face{font-family:LoL Body;font-style:normal;font-weight:700;src:url(https://raw.communitydragon.org/latest/plugins/rcp-fe-lol-typekit/global/default/fonts/spiegel/spiegel-semibold.otf) format("opentype")}
+@font-face{font-family:LoL Body;font-style:normal;font-weight:900;src:url(https://raw.communitydragon.org/latest/plugins/rcp-fe-lol-typekit/global/default/fonts/spiegel/spiegel-bold.otf) format("opentype")}
+@font-face{font-family:LoL Body;font-style:italic;font-weight:400;src:url(https://raw.communitydragon.org/latest/plugins/rcp-fe-lol-typekit/global/default/fonts/spiegel/spiegel-regularitalic.otf) format("opentype")}
+@font-face{font-family:LoL Body;font-style:italic;font-weight:700;src:url(https://raw.communitydragon.org/latest/plugins/rcp-fe-lol-typekit/global/default/fonts/spiegel/spiegel-semibolditalic.otf) format("opentype")}
+@font-face{font-family:LoL Body;font-style:italic;font-weight:900;src:url(https://raw.communitydragon.org/latest/plugins/rcp-fe-lol-typekit/global/default/fonts/spiegel/spiegel-bolditalic.otf) format("opentype")}
+@font-face{font-family:LoL Display;font-style:normal;font-weight:300;src:url(https://raw.communitydragon.org/latest/plugins/rcp-fe-lol-typekit/global/default/fonts/beaufort/beaufortforlol-light.otf) format("opentype")}
+@font-face{font-family:LoL Display;font-style:normal;font-weight:400;src:url(https://raw.communitydragon.org/latest/plugins/rcp-fe-lol-typekit/global/default/fonts/beaufort/beaufortforlol-regular.otf) format("opentype")}
+@font-face{font-family:LoL Display;font-style:normal;font-weight:500;src:url(https://raw.communitydragon.org/latest/plugins/rcp-fe-lol-typekit/global/default/fonts/beaufort/beaufortforlol-medium.otf) format("opentype")}
+@font-face{font-family:LoL Display;font-style:normal;font-weight:700;src:url(https://raw.communitydragon.org/latest/plugins/rcp-fe-lol-typekit/global/default/fonts/beaufort/beaufortforlol-bold.otf) format("opentype")}
+@font-face{font-family:LoL Display;font-style:normal;font-weight:900;src:url(https://raw.communitydragon.org/latest/plugins/rcp-fe-lol-typekit/global/default/fonts/beaufort/beaufortforlol-heavy.otf) format("opentype")}
+@font-face{font-family:LoL Display;font-style:italic;font-weight:300;src:url(https://raw.communitydragon.org/latest/plugins/rcp-fe-lol-typekit/global/default/fonts/beaufort/beaufortforlol-lightitalic.otf) format("opentype")}
+@font-face{font-family:LoL Display;font-style:italic;font-weight:400;src:url(https://raw.communitydragon.org/latest/plugins/rcp-fe-lol-typekit/global/default/fonts/beaufort/beaufortforlol-italic.otf) format("opentype")}
+@font-face{font-family:LoL Display;font-style:italic;font-weight:500;src:url(https://raw.communitydragon.org/latest/plugins/rcp-fe-lol-typekit/global/default/fonts/beaufort/beaufortforlol-mediumitalic.otf) format("opentype")}
+@font-face{font-family:LoL Display;font-style:italic;font-weight:700;src:url(https://raw.communitydragon.org/latest/plugins/rcp-fe-lol-typekit/global/default/fonts/beaufort/beaufortforlol-bolditalic.otf) format("opentype")}
+@font-face{font-family:LoL Display;font-style:italic;font-weight:900;src:url(https://raw.communitydragon.org/latest/plugins/rcp-fe-lol-typekit/global/default/fonts/beaufort/beaufortforlol-heavyitalic.otf) format("opentype")}
+
 * {
+    font-family: LoL Display, sans-serif;
     margin: 0;
     padding: 0;
 }
@@ -8,8 +26,18 @@ header {
     justify-content: space-between;
 }
 
-header button {
+.quit-btn {
+    display: inline-block;
+    background: url(https://raw.communitydragon.org/latest/plugins/rcp-fe-lol-shared-components/global/default/exit_default.png) no-repeat;
     margin: 10px;
+    border: none;
+    overflow: hidden;
+    text-indent: 200%;
+    white-space: nowrap;
+}
+
+.quit-btn:hover {
+    background: url(https://raw.communitydragon.org/latest/plugins/rcp-fe-lol-shared-components/global/default/exit_hover.png) no-repeat;
 }
 
 header p {
@@ -18,7 +46,7 @@ header p {
     padding: 20px;
 }
 
-#root {
+#ROOT {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
