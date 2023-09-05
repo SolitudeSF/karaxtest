@@ -15,36 +15,69 @@
 @font-face{font-family:LoL Display;font-style:italic;font-weight:700;src:url(https://raw.communitydragon.org/latest/plugins/rcp-fe-lol-typekit/global/default/fonts/beaufort/beaufortforlol-bolditalic.otf) format("opentype")}
 @font-face{font-family:LoL Display;font-style:italic;font-weight:900;src:url(https://raw.communitydragon.org/latest/plugins/rcp-fe-lol-typekit/global/default/fonts/beaufort/beaufortforlol-heavyitalic.otf) format("opentype")}
 
-* {
+h1, h2, h3, p {
     font-family: LoL Display, sans-serif;
-    margin: 0;
-    padding: 0;
+    padding: 0px;
+    margin: 0px;
 }
 
 header {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
+    align-items: center;
+    font-size: 2rem;
+    padding: none;
+    gap: 10px;
+    margin: 0px 0px 20px 0px;
 }
 
-.quit-btn {
-    display: inline-block;
-    background: url(https://raw.communitydragon.org/latest/plugins/rcp-fe-lol-shared-components/global/default/exit_default.png) no-repeat;
-    margin: 10px;
-    border: none;
-    overflow: hidden;
-    text-indent: 200%;
-    white-space: nowrap;
+.header-left {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
 }
 
-.quit-btn:hover {
-    background: url(https://raw.communitydragon.org/latest/plugins/rcp-fe-lol-shared-components/global/default/exit_hover.png) no-repeat;
+.current-rank {
+    display: flex;
+    align-items: center;
 }
 
-header p {
+.current-rank img {
+    object-fit: cover;
+    width: 120px;
+}
+
+.header-right {
     text-align: end;
     font-size: 2rem;
     padding: 20px;
 }
+
+@media (max-width: 680px) {
+    header {
+        transform: scale(0.5);
+    }
+}
+
+.quit-btn {
+    border: none;
+    overflow: hidden;
+    background-color: transparent;
+}
+
+.quit-btn-hover {
+    display: none;
+}
+
+.quit-btn:hover .quit-btn-default {
+    display: none;
+}
+
+.quit-btn:hover .quit-btn-hover {
+    display: block;
+}
+
 
 #ROOT {
     min-height: 100vh;
@@ -129,7 +162,6 @@ header p {
     justify-content: center;
     align-items: center;
     gap: 20px;
-    box-shadow: #32325d1a 0 13px 27px -5px, #00000040 0 8px 16px -8px;
 }
 
 .play-again {
@@ -137,16 +169,42 @@ header p {
     padding: 5px;
 }
 
-.result-text {
-    font-size: 1.2rem;
+.result-text, .new-record, .new-rank-container p {
+    font-size: 1.5rem;
+}
+
+.end-game-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    overflow: hidden;
 }
 
 .end-game-header {
     font-size: 2rem;
 }
 
-.score {
+.popup-rank {
+    object-fit: cover;
+    width: 200px;
+}
+
+.new-rank-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.info {
     align-self: center;
+}
+
+.info p {
+    text-align: center;
     font-size: 1.8rem;
 }
 
@@ -167,6 +225,12 @@ header p {
     padding: 20px;
 }
 
+@media (max-width: 680px) {
+    .card-board {
+        gap: 5px;
+    }
+}
+
 .card {
     box-shadow: #32325d1a 0 13px 27px -5px, #00000040 0 8px 16px -8px;
     padding: 10px;
@@ -175,4 +239,15 @@ header p {
     align-items: center;
     font-size: 1.2rem;
     gap: 10px;
+}
+
+@media (max-width: 680px) {
+    .card {
+        font-size: 0.8rem;
+    }
+
+    .card img {
+        object-fit: cover;
+        width: 50px;
+    }
 }
