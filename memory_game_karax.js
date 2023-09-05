@@ -3,7 +3,7 @@ var framePtr = null;
 var excHandler = 0;
 var lastJSError = null;
 var NTI134217753 = {size: 0, kind: 17, base: null, node: null, finalizer: null};
-var NTI536871039 = {size: 0, kind: 24, base: null, node: null, finalizer: null};
+var NTI536871038 = {size: 0, kind: 24, base: null, node: null, finalizer: null};
 var NTI536870925 = {size: 0, kind: 19, base: null, node: null, finalizer: null};
 var NTI33554441 = {size: 0,kind: 41,base: null,node: null,finalizer: null};
 var NTI536870924 = {size: 0, kind: 24, base: null, node: null, finalizer: null};
@@ -1003,7 +1003,7 @@ var NNI536870919 = {kind: 2, len: 7, offset: 0, typ: null, name: null, sons: [{k
 {kind: 1, offset: "currentDeck", len: 0, typ: NTI536870924, name: "currentDeck", sons: null}, 
 {kind: 1, offset: "openedChampions", len: 0, typ: NTI536870925, name: "openedChampions", sons: null}]};
 NTI536870919.node = NNI536870919;
-NTI536871039.base = NTI33554441;
+NTI536871038.base = NTI33554441;
 var NNI134217753 = {kind: 2, len: 0, offset: 0, typ: null, name: null, sons: []};
 NTI134217753.node = NNI134217753;
 NTI134217753.base = NTI33555178;
@@ -2990,7 +2990,7 @@ function getNewDeck_536871253(size_536871254) {
 
 function startGame_536871311(rank_536871312) {
     app_536871193[0].screen = 1;
-    app_536871193[0].game = nimCopy(app_536871193[0].game, {rank: rank_536871312, currentDeck: getNewDeck_536871253((rank_536871312 * 5)), status: 0, promoted: false, newHighscore: false, score: 0, openedChampions: {}}, NTI536870919);
+    app_536871193[0].game = nimCopy(app_536871193[0].game, {status: 0, rank: rank_536871312, currentDeck: getNewDeck_536871253((rank_536871312 * 5)), promoted: false, newHighscore: false, score: 0, openedChampions: {}}, NTI536870919);
 
   
 }
@@ -3128,7 +3128,7 @@ function shuffle_536871100(s_536871101, s_536871101_Idx) {
           }
       };
     };
-    s_536871101[s_536871101_Idx] = nimCopy(null, res_536871134, NTI536871039);
+    s_536871101[s_536871101_Idx] = nimCopy(null, res_536871134, NTI536871038);
 
   
 }
@@ -3757,7 +3757,7 @@ function HEX3Aanonymous_536871030(status_536871031, resp_536871032) {
 
   
 }
-var app_536871193 = [{screen: 0, highScore: 0, game: {status: 0, rank: 0, promoted: false, newHighscore: false, score: 0, currentDeck: [], openedChampions: {}}, rank: 0, championList: []}];
+var app_536871193 = [{screen: 0, highScore: 0, rank: 0, championList: [], game: ({status: 0, rank: 0, promoted: false, newHighscore: false, score: 0, currentDeck: [], openedChampions: {}})}];
 app_536871193[0].highScore = getLocalStorage_536871707("highscore");
 app_536871193[0].rank = getLocalStorage_536871713("rank");
 setRenderer_1090520735(createDom_536871549, "ROOT", null);
